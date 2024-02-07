@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  server:
+    build: "./area_backend"
+    restart: always
+    ports:
+      - "8080:8080" 
+    networks:
+      - area_networks       
+
+  client_mobile:
+    build: "./client_mobile/area_mobile"
+    volumes:
+      - app:/shared/
+
+  client_web:
+    build: "./client_web/area"
+    ports:
+      - "8081:8081"
+    depends_on:
+      - client_mobile
+      - server
+    volumes:
+      - app:/shared/
+
+volumes:
+  app:
+  mongo_data:
+
+networks:
+  area_networks:
+    driver: bridge
+       

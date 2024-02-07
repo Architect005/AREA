@@ -1,0 +1,300 @@
+
+h3 {
+    margin: 30px;
+    font-size: 150%;
+}
+
+.flex-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header img {
+    cursor: pointer;
+}
+
+.flex-box {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    background-color: #1ed760;
+    background-position: center;
+    text-align: center;
+    cursor: pointer;
+    line-height: 165px;
+    display: flex;
+}
+
+.spo {
+    margin-top: -1%;
+    margin-left: -18%;
+}
+
+.flex-box span {
+    margin-top: 14%;
+}
+
+.flex-box h1 {
+    font-size: 100%;
+}
+
+.flex-box2 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 165px;
+    cursor: pointer;
+    display: flex;
+}
+
+.git {
+    margin-top: -1%;
+    scale: 55%;
+}
+
+.flex-box2 span {
+    margin-top: -18%;
+}
+
+.flex-box3 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 165px;
+    cursor: pointer;
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+.gma {
+    margin-left: 5%;
+    margin-top: -1%;
+    scale: 55%;
+}
+
+.flex-box3 span {
+    margin-top: -18%;
+}
+
+.flex-box4 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 165px;
+    cursor: pointer;
+    display: flex;
+    background: #0d6ec6;
+    color: white;
+}
+
+.out {
+    margin-left: 3%;
+    margin-top: -1%;
+    scale: 95%;
+}
+
+.flex-box4 span {
+    margin-top: -18%;
+}
+
+.flex-box5 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #ff0000;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 165px;
+    cursor: pointer;
+    display: flex;
+    color: white;
+}
+
+.you {
+    margin-left: -5%;
+    margin-top: -1%;
+    scale: 55%;
+}
+
+.flex-box5 span {
+    margin-top: -18%;
+    margin-left: -10%;
+}
+
+.flex-box6 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #5865f2;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 165px;
+    cursor: pointer;
+    display: flex;
+    color: white;
+}
+
+.dis {
+    margin-left: -0%;
+    margin-top: -1%;
+    scale: 55%;
+}
+
+.flex-box6 span {
+    margin-top: -18%;
+    margin-left: 0%;
+}
+
+.flex-box7 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #0a99f2;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 165px;
+    cursor: pointer;
+    display: flex;
+    color: white;
+}
+
+.twi {
+    margin-left: 3%;
+    margin-top: -1%;
+    scale: 85%;
+}
+
+.flex-box7 span {
+    margin-top: -18%;
+}
+
+.flex-box8 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 165px;
+    cursor: pointer;
+    display: flex;
+    background: #0849b1;
+    color: white;
+}
+
+.one {
+    margin-left: 0%;
+    margin-top: -1%;
+    scale: 85%;
+}
+
+.flex-box8 span {
+    margin-top: -18%;
+    margin-left: 0%;
+}
+
+
+.flex-box9 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: grey;
+    margin: 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 165px;
+    cursor: pointer;
+    display: flex;
+    color: white;
+}
+
+.clo {
+    margin-left: 0%;
+    margin-top: -1%;
+    scale: 55%;
+}
+
+.flex-box9 span {
+    margin-top: -18%;
+}
+
+.flex-box:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box2:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box3:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box4:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box5:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box6:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box7:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box8:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box9:hover {
+    box-shadow: 0 0 5px 5px black;
+    transition: 0.3s;
+}
+
+.flex-box img {
+    scale: 0.5;
+    padding-top: 0%;
+}

@@ -1,0 +1,18 @@
+name: Docker
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: unbuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: compile with docker
+        run: 
+          sudo docker-compose build
+          sudo docker-compose up

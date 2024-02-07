@@ -1,0 +1,441 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "JSONPlaceholder",
+        "description": "Test",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/auth/check_token": {
+            "post": {
+                "description": "Verify all token validity",
+                "responses": {
+                    "200": {
+                        "description": "Valid token",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "token": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "token": "token"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Token doesn't exist/expired",
+                        "content": {                                                        "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "token": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "token": "token"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        
+        "/services/choose_service": {
+            "post": {
+                "description": "Get the right service",
+                "responses": {
+                    "200": {
+                        "description": "Action list sent",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "service": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "service": "Github"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        
+        "/services/github": {
+            "get": {
+                "description": "Access github user information",
+                "responses": {
+                    "200": {
+                        "description": "Valid credentaials",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "user": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "user": "Jacob",
+                                        "url": "https://api.github.com/users/Jacob/repos"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Make a push",
+                "responses": {
+                    "201": {
+                        "description": "Webhook créé avec succès",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "url": "https://api.github.com/repos/{username}/{repo}/hooks"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        },
+        
+        "/services/gmail": {
+            "get": {
+                "description": "Get users credantials",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "credentials": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Failed"
+                    }
+                }
+            },
+            "post": {
+                "description": {
+                }
+            }
+        },
+        
+        "/services/google_calendar": {
+            "get": {
+                "description": "Access calendar services",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "creds": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "creds": "credentials"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        
+        "/auth/login": {
+            "post": {
+                "description": "Create user access",
+                "responses": {
+                    "400": {
+                        "description": "User don't exist or password incorrect",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "email": {
+                                            "type": "string"
+                                        },
+                                        "password": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "email": "admin",
+                                        "password": "admin"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "Account created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "email": {
+                                            "type": "string"
+                                        },
+                                        "password": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "email": "admin",
+                                        "password": "admin"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        
+        "/auth/profile": {
+            "post": {
+                "description": "Check user profile",
+                "responses": {
+                    "400": {
+                        "description": "User already exist",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "username": {
+                                            "type": "string"
+                                        },
+                                        "password": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "username": "user",
+                                        "password": "password"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "Success, all informations are stocked",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "username": {
+                                            "type": "string"
+                                        },
+                                        "password": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "username": "user",
+                                        "password": "password"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        
+        "/auth/register": {
+            "post": {
+                "description": "Register users",
+                "responses": {
+                    "400": {
+                        "description": "User already exist",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "username": {
+                                            "type": "string"
+                                        },
+                                        "email": {
+                                            "type": "string"
+                                        },
+                                        "password": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "email": "mail",
+                                        "username": "name",
+                                        "password": "password"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "Fetch access token",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string"
+                                        },
+                                        "state": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "code": "code",
+                                        "state": "state"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        
+        "/services/spotify": {
+            "get": {
+                "description": "Access spotify services",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "redirect_uri": {
+                                            "type": "string"
+                                        },
+                                        "scope": {
+                                            "type": "string"
+                                        },
+                                        "state": {
+                                            "type": "string"
+                                        },
+                                        "response_type": {
+                                            "type": "string"
+                                        },
+                                        "client_id": {
+                                            "type": "string"
+                                        },
+                                        "auth_url": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                        "redirect_uri": "https://area-backend-v1.azurewebsites.net/fetch_token",
+                                        "scope": "user-read-private user-read-email playlist-read-collaborative app-remote-control user-modify-playback-state user-read-playback-state",
+                                        "state": "random string",
+                                        "client_id": "51795652891c42b6a69361557b6a9b3a",
+                                        "auth_url": "https://accounts.spotify.com/authorize?"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Access spotify services",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "ex": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        
+        "/services/youtube": {
+            "get": {
+                "description": "Access youtube services",
+                "responses": {
+                    "400": {
+                        "description": "ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "properties": {
+                                        "ex": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "example": {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

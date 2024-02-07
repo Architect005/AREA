@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0fa17260-c769-456d-9f69-7deacfabc535/AppServices/subscriptions/0fa17260-c769-456d-9f69-7deacfabc535/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/area-backend-v1",
+    "appService.deploySubpath": "area_backend"
+}

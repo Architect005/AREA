@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+:root {
+    --mainColor: black;
+    --secondaryColor: #0080FF;
+    --textColor: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+}
+
+nav a {
+    margin: 0 2rem;
+    color: white;
+    justify-content: space-between;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+
+}
+
+nav .connect {
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+}
+
+nav .connect:hover {
+    color:black;
+    background-color: white;
+    transition: 0.3s;
+}
+
+header .nav-btn {
+    padding: 5px;
+    cursor:pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media only screen and  (max-width: 1024px) {
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header nav {
+        position:fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--mainColor);
+        transition: 1s;
+        transform: translateY(-100vh);
+    }
+    
+    .register {
+        justify-content: flex-end;
+        max-width: 978px;
+        width: 100vw;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        box-shadow: 1px 3px 10px white;  
+    } 
+
+    header .responsive_nav {
+        transform: none;
+    }
+}
+
+header img {
+    scale: 0.5;
+    margin-left: -5%;
+}
+
+.empty {
+    padding-left: 37%;
+    padding-top: 5%;
+}
+ 
+.empty h1 {
+    justify-content: center;
+    padding-left: 1.5%;
+    margin-top: 5%;
+    opacity: 50;
+}
+
+.add {
+    padding-top: 3%;
+    scale: 0.5;
+    padding-left: 125%;
+    cursor: pointer;
+}
+
+.test:hover {
+    scale: 1.15;
+    box-shadow: 1px 3px 20px black;
+    transition: 1.2s;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
